@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query53.tpl and seed 1819994127
 select  * from 
 (select i_manufact_id,

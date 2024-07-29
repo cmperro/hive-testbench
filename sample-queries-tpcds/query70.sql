@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query70.tpl and seed 1819994127
 select  
     sum(ss_net_profit) as total_sum

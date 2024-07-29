@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query64.tpl and seed 1220860970
 with cs_ui as
  (select cs_item_sk

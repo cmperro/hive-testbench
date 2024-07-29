@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query66.tpl and seed 2042478054
 select   
          w_warehouse_name

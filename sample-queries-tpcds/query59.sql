@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query59.tpl and seed 1819994127
 with wss as 
  (select d_week_seq,

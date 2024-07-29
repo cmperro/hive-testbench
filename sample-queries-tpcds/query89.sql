@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query89.tpl and seed 1719819282
 select  *
 from(

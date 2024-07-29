@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query34.tpl and seed 1971067816
 select c_last_name
        ,c_first_name

@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query9.tpl and seed 1490436826
 select case when (select count(*) 
                   from store_sales 

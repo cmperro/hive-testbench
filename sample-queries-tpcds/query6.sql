@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query6.tpl and seed 1819994127
 select  a.ca_state state, count(*) cnt
  from customer_address a

@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query85.tpl and seed 622697896
 select  substr(r_reason_desc,1,20)
        ,avg(ws_quantity)

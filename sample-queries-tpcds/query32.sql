@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query32.tpl and seed 2031708268
 select  sum(cs_ext_discount_amt)  as `excess discount amount` 
 from 

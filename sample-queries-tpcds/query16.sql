@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query16.tpl and seed 171719422
 select  
    count(distinct cs_order_number) as `order count`

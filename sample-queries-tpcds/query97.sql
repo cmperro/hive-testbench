@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query97.tpl and seed 1819994127
 with ssci as (
 select ss_customer_sk customer_sk

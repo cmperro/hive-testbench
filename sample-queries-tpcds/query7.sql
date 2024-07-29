@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query7.tpl and seed 1930872976
 select  i_item_id, 
         avg(ss_quantity) agg1,

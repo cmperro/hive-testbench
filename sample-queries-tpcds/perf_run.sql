@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 use ${DB};
 SELECT "--marker--", "${DB}", "query1.sql", "",  unix_timestamp();
 !run query1.sql

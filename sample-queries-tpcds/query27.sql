@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query27.tpl and seed 2017787633
 select  i_item_id,
         s_state, grouping(s_state) g_state,

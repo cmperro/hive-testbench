@@ -1,3 +1,4 @@
+use ${hivevar:DB};
 -- start query 1 in stream 0 using template query52.tpl and seed 1819994127
 select  dt.d_year
  	,item.i_brand_id brand_id
