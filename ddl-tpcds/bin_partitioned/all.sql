@@ -550,7 +550,7 @@ as select * from ${SOURCE}.warehouse;
 create database if not exists ${DB};
 use ${DB};
 
-drop table if exists${DB}.web_page;
+drop table if exists ${DB}.web_page;
 
 create table ${DB}.web_page
 stored as ORC
