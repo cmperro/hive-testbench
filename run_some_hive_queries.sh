@@ -1,6 +1,7 @@
 #!/bin/bash
 
-database="tpcds_1000_orc"
+#database="tpcds_1000_orc"
+database=${1}
 
 
 #Run a random query
@@ -13,4 +14,4 @@ beeline --hivevar DB=${database} -f sample-queries-tpcds/query$query_num.sql
 #Wait a random amount of time
 sleep_time=$((1 + $RANDOM % 60))
 echo "Sleeping for " $sleep_time " seconds"
-sleep $sleep_time       
+sleep $sleep_time
