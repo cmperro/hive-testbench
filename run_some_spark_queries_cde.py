@@ -1,0 +1,27 @@
+from pyspark.sql import SparkSession
+import sys
+import random
+import configparser
+
+
+
+config = configparser.ConfigParser()
+config.read('/app/mount/parameters.conf')
+storageLocation=config.get("general","data_lake_bucket")
+storagePath=config.get("general","path_to_spark_queries")
+print("Storage Location from Config File: ", storageLocation)
+print("Path to Queries from Config File: ", storagePath)
+#query = sys.argv[1]
+db = sys.argv[1]
+query = random.randint(1,100)
+location = "s3a://" +  storageLocation + "/" + storagePath +  "sample_query_" + query + ".sql"
+app_name = "CMP NEW APP - QUERY " + query
+spark = SparkSession \
+    .builder \
+    .appName(app_name) \
+    .getOrCreate()
+use_query="use " + db + ";"
+spark.sql(use_query)
+df3 = spark.read.text(location, wholetext=True)
+query2=df3.collect()[0][0]
+results = spark.sql(query2).show()
