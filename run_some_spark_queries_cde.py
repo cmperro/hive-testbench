@@ -13,8 +13,9 @@ print("Storage Location from Config File: ", storageLocation)
 print("Path to Queries from Config File: ", storagePath)
 #query = sys.argv[1]
 db = sys.argv[1]
-query = random.randint(1,100)
-location = "s3a://" +  storageLocation + "/" + storagePath +  "sample_query_" + query + ".sql"
+query = str(random.randint(1,100))
+print("Running Query ", query)
+location = "s3a://" +  storageLocation + "/" + storagePath +  "q" + query + ".sql"
 app_name = "CMP NEW APP - QUERY " + query
 spark = SparkSession \
     .builder \
