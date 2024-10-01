@@ -10,6 +10,7 @@ dag = DAG(
     start_date=parser.isoparse('2024-09-26T14:08:13Z').replace(tzinfo=timezone.utc),
     schedule_interval="@hourly",
     is_paused_upon_creation=False,
+    catchup=False,
     default_args={
         'owner': 'cperro',
     },
