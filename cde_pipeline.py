@@ -6,7 +6,7 @@ from datetime import timedelta
 from dateutil import parser
 
 dag = DAG(
-    dag_id='CP_DAG',
+    dag_id='TPCDS_DAG',
     start_date=parser.isoparse('2024-09-26T14:08:13Z').replace(tzinfo=timezone.utc),
     schedule_interval=None,
     is_paused_upon_creation=False,
@@ -16,7 +16,7 @@ dag = DAG(
 )
 
 Job1 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     trigger_rule='all_success',
     task_id='Job1',
     dag=dag,
@@ -31,13 +31,13 @@ sleep $sleep_time''',
 )
 
 Job2 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     task_id='Job2',
     dag=dag,
 )
 
 Job3 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     task_id='Job3',
     dag=dag,
 )
@@ -51,19 +51,19 @@ sleep $sleep_time''',
 )
 
 cde_job_1 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     task_id='cde_job_1',
     dag=dag,
 )
 
 cde_job_2 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     task_id='cde_job_2',
     dag=dag,
 )
 
 cde_job_3 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     task_id='cde_job_3',
     dag=dag,
 )
@@ -76,7 +76,7 @@ sleep $sleep_time''',
 )
 
 cde_job_4 = CDEJobRunOperator(
-    job_name='CMP_TEST_CDE',
+    job_name='TPCDS_JOB',
     task_id='cde_job_4',
     dag=dag,
 )

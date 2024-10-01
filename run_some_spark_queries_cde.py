@@ -18,7 +18,7 @@ db = sys.argv[1]
 query = str(random.randint(1,100))
 print("Running Query ", query)
 location = "s3a://" +  storageLocation + "/" + storagePath +  "q" + query + ".sql"
-app_name = "CMP NEW APP - QUERY " + query
+app_name = "TPCDS APP CDE - QUERY " + query
 spark = SparkSession \
     .builder \
     .appName(app_name) \

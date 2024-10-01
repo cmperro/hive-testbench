@@ -6,7 +6,7 @@ if __name__ == '__main__':
     query = sys.argv[1]
     db = sys.argv[2]
     location = "hdfs:///tmp/spark-queries-tpcds/q" + query + ".sql"
-    app_name = "CMP NEW APP - QUERY " + query
+    app_name = "TPCDS APP DH - QUERY " + query
     spark = SparkSession \
     .builder \
     .appName(app_name) \
