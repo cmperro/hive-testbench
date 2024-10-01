@@ -7,8 +7,10 @@ import configparser
 
 config = configparser.ConfigParser()
 config.read('/app/mount/parameters.conf')
-storageLocation=config.get("general","data_lake_bucket")
-storagePath=config.get("general","path_to_spark_queries")
+#storageLocation=config.get("general","data_lake_bucket")
+storageLocation=sys.argv[2]
+#storagePath=config.get("general","path_to_spark_queries")
+storagePath=sys.argv[3]
 print("Storage Location from Config File: ", storageLocation)
 print("Path to Queries from Config File: ", storagePath)
 #query = sys.argv[1]
