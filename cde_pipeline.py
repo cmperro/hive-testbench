@@ -8,7 +8,7 @@ from dateutil import parser
 dag = DAG(
     dag_id='TPCDS_DAG',
     start_date=parser.isoparse('2024-09-26T14:08:13Z').replace(tzinfo=timezone.utc),
-    schedule_interval=None,
+    schedule_interval="@hourly",
     is_paused_upon_creation=False,
     default_args={
         'owner': 'cperro',
